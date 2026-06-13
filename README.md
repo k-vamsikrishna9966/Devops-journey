@@ -105,6 +105,73 @@ See: `day01-commands.txt`
 - Allowed port 80 again
 - Website worked successfully
 
+## Day 06 - Logs
+
+### What I Did
+
+* Used `journalctl` to view Nginx service logs
+* Used `tail` to view recent log entries
+* Used `tail -f` to monitor logs in real time
+* Explored Nginx log files:
+
+  * `/var/log/nginx/access.log`
+  * `/var/log/nginx/error.log`
+* Generated HTTP requests using `curl localhost`
+* Analyzed access log entries and HTTP status codes
+
+### Break & Fix
+
+Stopped Nginx:
+
+```bash
+sudo systemctl stop nginx
+```
+
+Tested website:
+
+```bash
+curl localhost
+```
+
+Output:
+
+```text
+curl: (7) Failed to connect to localhost port 80
+```
+
+Troubleshooting Steps:
+
+1. Checked Nginx status using `systemctl status nginx`
+2. Verified logs using `journalctl -u nginx`
+3. Confirmed port 80 was not listening using `ss -tuln`
+4. Started Nginx service again
+5. Verified website accessibility using `curl localhost`
+
+### Commands Used
+
+```bash
+sudo journalctl -u nginx
+sudo journalctl -u nginx -n 5
+
+tail /var/log/nginx/access.log
+sudo tail -f /var/log/nginx/access.log
+
+curl localhost
+
+sudo systemctl stop nginx
+sudo systemctl start nginx
+```
+
+### Learning
+
+* `journalctl` displays service logs managed by systemd
+* `access.log` records requests handled by Nginx
+* `error.log` records warnings and errors
+* `tail` shows recent log entries
+* `tail -f` monitors logs in real time
+* HTTP Status Code `200` means the request was successful
+* Logs are one of the first places to check during troubleshooting
+
 ---
 
 
