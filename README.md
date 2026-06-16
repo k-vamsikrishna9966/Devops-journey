@@ -172,6 +172,72 @@ sudo systemctl start nginx
 * HTTP Status Code `200` means the request was successful
 * Logs are one of the first places to check during troubleshooting
 
+## Day 07 - Nginx Configuration
+
+### What I Did
+
+* Explored Nginx configuration files
+* Learned the purpose of `/etc/nginx/sites-enabled/default`
+* Created a backup of the default configuration
+* Modified Nginx configuration settings
+* Tested configuration using `sudo nginx -t`
+* Reloaded Nginx after successful validation
+
+### Break & Fix
+
+* Introduced configuration errors while editing Nginx config
+* Encountered errors such as:
+
+  * `unexpected ";"`
+  * `duplicate default server`
+* Used `sudo nginx -t` to identify the exact file and line number
+* Fixed configuration issues and restored service successfully
+
+### Learning
+
+* Importance of backing up configuration files
+* Nginx configuration structure
+* Using `nginx -t` before restarting or reloading services
+* Reading and understanding Nginx error messages
+* Troubleshooting configuration failures
+
+---
+
+## Day 08 - Bash Scripting Basics
+
+### What I Did
+
+* Created Bash scripts
+* Learned script execution using `chmod +x`
+* Practiced variables and `echo`
+* Practiced `if`, `else`, and `for` loops
+* Built basic automation scripts
+
+### Scripts Created
+
+* `hello.sh`
+* `file-check.sh`
+* `loop.sh`
+* `nginx-check.sh`
+
+### Mini Project
+
+Created an Nginx monitoring script that:
+
+* Checks whether Nginx is running
+* Displays service status
+* Reports if Nginx is stopped
+
+### Learning
+
+* Bash script structure using `#!/bin/bash`
+* File checks using `-f`
+* Directory checks using `-d`
+* Loop variables using `$i`
+* Conditional statements using `if-else`
+* Basic Linux task automation
+* Difference between script logic and command execution
+
 ---
 
 
