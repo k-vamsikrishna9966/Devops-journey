@@ -239,5 +239,131 @@ Created an Nginx monitoring script that:
 * Difference between script logic and command execution
 
 ---
+## Day 09 - Bash Advanced & Linux Filesystem
+
+### What I Did
+
+* Learned Linux filesystem structure
+* Explored important directories:
+
+  * `/etc`
+  * `/var/log`
+  * `/home`
+  * `/usr/sbin`
+  * `/tmp`
+* Learned Bash functions
+* Learned script arguments (`$1`, `$2`)
+* Practiced reusable Bash scripts
+
+### Scripts Created
+
+* `function.sh`
+* `args.sh`
+
+### Linux Filesystem Learning
+
+#### `/etc`
+
+Stores configuration files.
+
+Examples:
+
+* `/etc/nginx/nginx.conf`
+* `/etc/hosts`
+* `/etc/passwd`
+
+#### `/var/log`
+
+Stores application and system logs.
+
+Examples:
+
+* `/var/log/nginx/access.log`
+* `/var/log/nginx/error.log`
+* `/var/log/auth.log`
+
+#### `/home`
+
+Stores user files and directories.
+
+Example:
+
+* `/home/vamsi`
+
+#### `/usr/sbin`
+
+Stores system executables.
+
+Example:
+
+* `/usr/sbin/nginx`
+
+### Bash Functions
+
+Created reusable functions to avoid repeating code.
+
+Example:
+
+```bash
+say_hello() {
+    echo "Hello World"
+}
+
+say_hello
+```
+
+### Bash Arguments
+
+Learned how to pass values to scripts.
+
+Example:
+
+```bash
+./args.sh nginx apache
+```
+
+Results:
+
+```text
+$1 = nginx
+$2 = apache
+```
+
+### Commands Practiced
+
+```bash
+pwd
+ls /
+which nginx
+find ~ -name "filename"
+```
+
+### Key Learning
+
+* Difference between configuration files, logs, executables, and user files
+* How Bash functions improve script reusability
+* How arguments make scripts dynamic
+* How to troubleshoot "No such file or directory" errors
+* Importance of verifying assumptions before fixing issues
+
+### Real-World Troubleshooting Flow
+
+```text
+Error
+↓
+Check current directory
+↓
+Verify file exists
+↓
+Find file location
+↓
+Run correct file
+↓
+Confirm success
+```
+
+### Day 09 Outcome
+
+Successfully learned Linux filesystem basics, Bash functions, Bash arguments, and practical troubleshooting techniques. All scripts were committed and pushed to GitHub.
 
 
