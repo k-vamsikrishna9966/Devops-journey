@@ -367,3 +367,19 @@ Confirm success
 Successfully learned Linux filesystem basics, Bash functions, Bash arguments, and practical troubleshooting techniques. All scripts were committed and pushed to GitHub.
 
 
+## Day 10 - Package Management, SSH & Python Basics
+
+### What I Learned
+
+- apt update
+- apt install
+- dpkg -l
+- SSH key generation
+- OpenSSH server
+- ssh localhost
+- Python variables
+- input()
+- if-else
+- even/odd program
+- pass/fail program
+- for loops
