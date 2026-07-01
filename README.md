@@ -383,3 +383,40 @@ Successfully learned Linux filesystem basics, Bash functions, Bash arguments, an
 - even/odd program
 - pass/fail program
 - for loops
+# Day 11 - Linux Users & Groups
+
+## What I Learned
+
+- whoami
+- id
+- cat /etc/passwd
+- useradd
+- passwd
+- groups
+- usermod
+- su
+
+## Practical Work
+
+- Created a new Linux user
+- Assigned a password
+- Added the user to the sudo group
+- Switched between users
+- Learned the difference between `useradd` and `useradd -m`
+
+## Commands Used
+
+```bash
+whoami
+id
+cat /etc/passwd | head
+sudo useradd testuser
+sudo passwd testuser
+groups testuser
+sudo usermod -aG sudo testuser
+su - testuser
+```
+
+## Outcome
+
+Successfully learned Linux user management, group management, and user permissions.
