@@ -1,0 +1,25 @@
+DAY 11 - USERS & GROUPS
+
+Commands Practiced
+
+whoami
+id
+cat /etc/passwd | head
+sudo useradd testuser
+id testuser
+sudo passwd testuser
+groups testuser
+sudo usermod -aG sudo testuser
+su - testuser
+
+What I Learned
+
+- Checked current logged-in user.
+- Viewed UID, GID and user groups.
+- Viewed Linux user accounts from /etc/passwd.
+- Created a new user.
+- Assigned a password to the new user.
+- Added the user to the sudo group.
+- Switched to another user using su.
+- Learned that useradd does not create a home directory by default.
+- Learned that useradd -m creates the home directory automatically.
